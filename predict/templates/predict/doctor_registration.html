@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="row">
+    
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+  <div class="container" >
+    
+  <form method="POST">
+    {% csrf_token %}
+      <h1 style="text-align:center; color: aliceblue; background-color:black"> Doctor Registration Form</h1>
+      
+     
+      <div class="row">
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="fname" class="form-label">Frist Name</label>
+            <input type="text" class="form-control" id="fname" name="fname" ria-describedby="First name">
+      
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="lname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lname" name="lname" ria-describedby="last name">
+      
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="Username" name="Username" ria-describedby="username">
+      
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="pass1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="pass1">
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email No</label>
+            <input type="text" class="form-control" id="eno" name="email" ria-describedby="Email No">
+      
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="phone" class="form-label"> Mobile No</label>
+            <input type="text" class="form-control" id="lname" name="phone" ria-describedby="last name">
+      
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" name="address" ria-describedby="Address">
+      
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mb-3">
+            {% comment %} <label for="specialization " class="form-label"> Specialization </label>
+            <input type="text" class="form-control" id="specialization " name="specialization " ria-describedby="last name"> {% endcomment %}
+            <label for="specialization " class="form-label"> Specialization </label>
+            <select class="form-select" id="validationCustom04" name="specialization" required>
+                <option selected disabled value="">....</option>
+                <option>Neurologist</option>
+                <option>Allergist_Immunologist</option>
+                <option>Urologist</option>
+                <option>Dermatologist</option>
+                <option>Gastroenterologist</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+    
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-success" type="submit">login</button>
+      </div>
+    
+    </form>
+  </div>
+</div>
+</div>  
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+    {% for message in messages %}
+  swal("   {{message}}");
+  
+  {% endfor %}
+</script>
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

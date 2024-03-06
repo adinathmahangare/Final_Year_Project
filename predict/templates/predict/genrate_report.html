@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+      {% if  forms %}
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col"> Username </th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            
+            <th scope="col">height</th>
+            <th scope="col">weight</th>
+            <th scope="col">symptom1</th>
+            <th scope="col">symptom2</th>
+            <th scope="col">symptom3</th>
+            <th scope="col">symptom4</th>
+            <th scope="col">symptom5</th>
+            <th scope="col">predicted_disease</th>
+            <th scope="col">consultdoctor</th>
+            <th scope="col">Action</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            {% for fm in forms  %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td colspan="">{{fm.name}}</td>
+            <td colspan="">{{fm.age}}</td>
+            <td colspan="">{{fm.gender}}</td>
+            <td colspan="">{{fm.height}}</td>
+            <td colspan="">{{fm.weight}}</td>
+            <td colspan="">{{fm.symptom1}}</td>
+            <td colspan="">{{fm.symptom2}}</td>
+            <td colspan="">{{fm.symptom3}}</td>
+            <td colspan="">{{fm.symptom4}}</td>
+            <td colspan="">{{fm.symptom5}}</td>
+            <td colspan="">{{fm.predicted_disease}}</td>
+            <td colspan="">{{fm.consultdoctor}}</td>
+            <td scope="col"><a href="" class="btn btn-primary" type="submit">Uploded Reports</a></td> 
+            
+             
+            
+             
+          </tr>
+          {% endfor %}</tbody></table>{% endif %}
+    </div></div>
+    <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

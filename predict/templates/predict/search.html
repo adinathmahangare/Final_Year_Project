@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"></div>
+      {% if  forms %}
+    
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Aadhar  no</th>
+            <th scope="col"> First  name</th>
+            <th scope="col">Last name</th>
+           
+            <th scope="col">symptoms1</th>
+            {% comment %} <th scope="col">Driver mobil</th> {% endcomment %}
+            <th scope="col">symptoms2</th>
+            <th scope="col">symptoms3</th>
+            <th scope="col">symptoms4</th>
+            <th scope="col">Disease</th>
+            <th scope="col">Medicine</th>
+            <th scope="col">date</th>
+            <th scope="col">hphone</th>
+            <th scope="col">pdf</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for fm in forms  %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td colspan="">{{fm.aadhaarno}}</td>
+            <td colspan="">{{fm.name}}</td>
+            <td colspan="">{{fm.lname}}</td>
+            <td colspan="">{{fm.symptoms1}}</td>
+            <td colspan="">{{fm.symptoms2}}</td>
+            <td colspan="">{{fm.symptoms3}}</td>
+            <td colspan="">{{fm.symptoms4}}</td>
+            <td colspan="">{{fm.Disease}}</td>
+            <td colspan="">{{fm.Medicine}}</td>
+            <td colspan="">{{fm.date}}</td>
+            <td colspan="">{{fm.hphone}}</td>
+            <td colspan=""><p><a class="btn btn-primary" href="{{ fm.file.url }}">OPen Files</a></p></td>
+
+         
+             
+          </tr>
+          {% endfor %}</tbody></table>{% endif %}
+    
+    <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>
