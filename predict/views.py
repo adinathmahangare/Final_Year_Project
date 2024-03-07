@@ -301,10 +301,11 @@ def prediction(request):
     from sklearn.naive_bayes import GaussianNB
     from sklearn.metrics import accuracy_score
 
+
     # Training data
-    path_train = "D:/project-2023 social/object detection/smart-healthcare-system-master/predict/templates/predict/Training.csv"
+    path_train = "C:/Users/Admin/Documents/Final_Year_Project/health_care_system/predict/templates/predict/Training.csv"
     data_training = pd.read_csv(path_train)
-    path_test = "D:/project-2023 social/object detection/smart-healthcare-system-master/predict/templates/predict/Testing.csv"
+    path_test = "C:/Users/Admin/Documents/Final_Year_Project/health_care_system/predict/templates/predict/Testing.csv"
     data_testing = pd.read_csv(path_test)
 
     x_train = data_training.values[:, 0:131]

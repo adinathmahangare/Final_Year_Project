@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
-    <title>Document</title>
+    <title>Patient | History</title>
 </head>
 <body>
     <div class="container"></div>
@@ -27,9 +27,9 @@
             <th scope="col">symptoms4</th>
             <th scope="col">Disease</th>
             <th scope="col">Medicine</th>
-            <th scope="col">date</th>
-            <th scope="col">hphone</th>
-            <th scope="col">pdf</th>
+            <th scope="col">Date</th>
+            <th scope="col">Hospital Contact</th>
+            <th scope="col">Receipt</th>
           </tr>
         </thead>
         <tbody>
@@ -47,7 +47,7 @@
             <td colspan="">{{fm.Medicine}}</td>
             <td colspan="">{{fm.date}}</td>
             <td colspan="">{{fm.hphone}}</td>
-            <td colspan=""><p><a class="btn btn-primary" href="{{ fm.file.url }}">OPen Files</a></p></td>
+            <td colspan=""><p><a class="btn btn-primary" href="{{ fm.file.url }}">Open Files</a></p></td>
 
          
              
