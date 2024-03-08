@@ -17,11 +17,12 @@ HealthChain is a revolutionary web-based system aimed at enhancing healthcare co
 
 ### Usage
 To run the project locally, follow these steps:
-1. Clone the repository: `git clone <repository_url>`
-2. Navigate to the project directory: `cd HealthChain`
-3. Install dependencies: `npm install`
-4. Start the server: `npm start`
-5. Access the application in your browser at `http://localhost:3000`
+1. **Clone the repository**: `git clone https://github.com/adinathmahangare/Final_Year_Project`
+2. **Navigate to the project directory**: `cd Final_Year_Project`
+3. **Install Python dependencies**: `pip install -r requirements.txt`
+4. **Start the server**: `python manage.py runserver`
+5. **Access the application in your browser** at `http://localhost:8000`
+
 
 ### Copyright
 Copyright © [2023] [Adinath Mahangare]
